@@ -13,18 +13,46 @@ body{
     justify-content: center;
     align-items: center;
     background: #202638;
+    height: 100vh;
+    background: url("img/akali.jpg");
+    background-size: cover;
+    background-position-y: center;
 }
+
+/*------------------ scroll ------------------*/
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/*------------------ scroll ------------------*/
 
 section{
     width: 50vw;
+    border-radius: 1rem;
+    background: rgba(32, 38, 56, 0.85);
+    max-height: 92vh;    
+    padding-bottom: 2rem;
 }
 
 .items-padre-container{
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     padding: 2rem;
-    background: #202638;
     border-radius: 5px;
     margin: 0 auto;
     justify-content: space-between;
@@ -178,17 +206,36 @@ section{
     section{
         width: 80vw;
         padding-top: 1rem;
+        overflow: overlay;
     }
+
+    .items-padre-container button .hover-item{
+        bottom: -120%;
+        top: initial;
+    }
+
+    .items-padre-container button .hover-item::before{
+        bottom: initial;
+        top: -1px;
+        border-color: #586ba2 transparent transparent #586ba2;
+    }
+    
 }
 
 @media(max-width:992px){
     body{
         padding: 0;
+        height: 100vh;
+        overflow: hidden;
     }
 
     section{
-        width: 96vw;
+        width: 100vw;
         padding-bottom: 1rem;
+        max-height: 100vh;
+        padding: 1rem 3vw;
+        border-radius: 0;
+        background: rgba(32, 38, 56, 0.75);
     }
 
     .items-padre-container{
@@ -199,12 +246,17 @@ section{
 
     .items-padre-container button{
         margin: 0 3px 3px 0;
+        width: 16vw;
+        height: 16vw;
+        background-size: cover !important;
     }
 
     .items-padre-container button .hover-item{
         top: initial;
         bottom: -120%;
         z-index: 1;
+        width: 8rem;
+        height: 4rem;
     }
 
     .items-padre-container button .hover-item::before{
@@ -213,6 +265,7 @@ section{
         bottom: initial;
         top: -10px;
         z-index: 2;
+        border-color: transparent #586ba2 #586ba2 transparent;
     }
 
     .items-padre-container button:hover .hover-item{
@@ -222,6 +275,11 @@ section{
 
     .box-result{
         padding: 0;
+    }
+
+    .box-result .lista-fija,
+    .lista-dinamica{
+        margin-top: .5rem;
     }
 
     .box-result .lista-fija>div,
@@ -241,6 +299,7 @@ section{
 
     .box-result .items-result-container{
         margin-left: .5rem;
+        margin-top: .5rem;
     }
 
     .box-result .items-result-container .result{
