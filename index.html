@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <link rel="stylesheet" href="estilo.css">
+    <title>Combinaciones TFT</title>
+</head>
+<body>
+    <section>
+        <div class="items-padre-container" id="items-padre-container">
+            <button onclick="encuentraResultante(0)">
+                <div class="hover-item">
+                    <span class="name">Espadón</span>
+                    <span class="desc">+15 de daño de ataque</span> 
+                </div>
+            </button>
+            <button onclick="encuentraResultante(1)">
+                <div class="hover-item">
+                    <span class="name">Arco Curvo</span>
+                    <span class="desc">+15% de velocidad de ataque</span> 
+                </div>
+            </button>
+            <button onclick="encuentraResultante(2)">
+                <div class="hover-item">
+                    <span class="name">Vara AP</span>
+                    <span class="desc">+20% de poder de hechizo</span> 
+                </div>
+            </button>
+            <button onclick="encuentraResultante(3)">
+                <div class="hover-item">
+                    <span class="name">Lágrima</span>
+                    <span class="desc">+20 de mana</span> 
+                </div>
+            </button>
+            <button onclick="encuentraResultante(4)">
+                <div class="hover-item">
+                    <span class="name">Armadura</span>
+                    <span class="desc">+25 de armadura</span> 
+                </div>
+            </button>
+            <button onclick="encuentraResultante(5)">
+                <div class="hover-item">
+                    <span class="name">Resist. Mágica</span>
+                    <span class="desc">+25 de resistencia mágica</span>  
+                </div>
+            </button>
+            <button onclick="encuentraResultante(6)">
+                <div class="hover-item">
+                    <span class="name">Vida</span>
+                    <span class="desc">+200 de vida</span> 
+                </div>
+            </button>
+            <button onclick="encuentraResultante(7)">
+                <div class="hover-item">
+                    <span class="name">Crítico</span>
+                    <span class="desc">+10% prob. golpe critico <br> +10% prob. evasion</span> 
+                </div>
+            </button>
+            <button onclick="encuentraResultante(8)">
+                <div class="hover-item">
+                    <span class="name">Espátula</span>
+                    <span class="desc">Para combinarse!</span> 
+                </div>
+            </button>
+        </div>
+        <div class="box-result">
+
+            <div class="lista-fija" id="lista-fija">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <div class="lista-dinamica" id="lista-dinamica">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <div class="items-result-container" id="items-result-container">
+                <div class="result"></div>
+                <div class="result"></div>
+                <div class="result"></div>
+                <div class="result"></div>
+                <div class="result"></div>
+                <div class="result"></div>
+                <div class="result"></div>
+                <div class="result"></div>
+                <div class="result"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
