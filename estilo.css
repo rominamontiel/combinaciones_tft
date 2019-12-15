@@ -16,7 +16,7 @@ body{
 }
 
 section{
-    width: 70vw;
+    width: 50vw;
 }
 
 .items-padre-container{
@@ -27,6 +27,7 @@ section{
     background: #202638;
     border-radius: 5px;
     margin: 0 auto;
+    justify-content: space-between;
 }
 
 .items-padre-container button{
@@ -36,9 +37,9 @@ section{
     height: 64px;
     cursor: pointer;
     border: 2px solid #000;
-    background: url("/itemPadre/0.png");
+    background: url("itemPadre/0.png");
     border-radius: 7px;
-    margin: .5rem 1rem;
+    margin: .5rem 0;
     color: transparent;
     position: relative;
     overflow: hidden;
@@ -117,7 +118,8 @@ section{
     background: url("undefined.png");
     background-size: cover !important;
     margin-right: 2rem;
-    border-radius: 5px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 238, 88, 0.45);
     opacity: .6;
 }
 
@@ -172,7 +174,7 @@ section{
     }
 }
 
-@media(max-width:1300px){
+@media(max-width:1500px){
     section{
         width: 80vw;
         padding-top: 1rem;
@@ -197,6 +199,25 @@ section{
 
     .items-padre-container button{
         margin: 0 3px 3px 0;
+    }
+
+    .items-padre-container button .hover-item{
+        top: initial;
+        bottom: -120%;
+        z-index: 1;
+    }
+
+    .items-padre-container button .hover-item::before{
+        left: 42%;
+        transform: rotate(-135deg) translateX(-50%);
+        bottom: initial;
+        top: -10px;
+        z-index: 2;
+    }
+
+    .items-padre-container button:hover .hover-item{
+        animation: none;
+        opacity: 0.9;
     }
 
     .box-result{
