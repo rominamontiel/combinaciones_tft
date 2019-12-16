@@ -227,6 +227,9 @@ section{
         padding: 0;
         height: 100vh;
         overflow: hidden;
+        background: url("img/nami.jpg");
+        background-position-x: center;
+        background-position-y: top;
     }
 
     section{
