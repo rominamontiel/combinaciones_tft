@@ -16,7 +16,7 @@ body{
     height: 100vh;
     background: url("img/akali.jpg");
     background-size: cover;
-    background-position-y: center;
+    background-position: center;
 }
 
 /*------------------ scroll ------------------*/
@@ -233,6 +233,7 @@ section{
         width: 100vw;
         padding-bottom: 1rem;
         max-height: 100vh;
+        height: 100%;
         padding: 1rem 3vw;
         border-radius: 0;
         background: rgba(32, 38, 56, 0.75);
